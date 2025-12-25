@@ -29,3 +29,12 @@ obj/
 *.bak
 *.log
 
+# Virtual environment
+.venv/
+
+.python-version
+main.py
+pyproject.toml
+uv.lock
+*.ipynb
+youtubelinks.txt
