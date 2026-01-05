@@ -1,6 +1,7 @@
 -- Script to create the Product table and load data into it.
 
 DROP TABLE product;
+
 CREATE TABLE product
 ( 
     product_category varchar(255),
@@ -38,8 +39,6 @@ INSERT INTO product VALUES
 ('Smartwatch', 'Samsung', 'Galaxy Watch 4', 600),
 ('Smartwatch', 'OnePlus', 'OnePlus Watch', 220);
 COMMIT;
-
-
 
 
 -- All the SQL Queries written during the video
@@ -107,8 +106,6 @@ from (
     where product_category = 'Phone') x;
 
 
-
-
 -- CUME_DIST (cumulative distribution) ; 
 /*  Formula = Current Row no (or Row No with value same as current row) / Total no of rows */
 
@@ -136,4 +133,3 @@ from (
     round(percent_rank() over(order by price)::numeric * 100, 2) as per
     from product) x
 where x.product_name='Galaxy Z Fold 3';
-
