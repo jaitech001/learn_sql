@@ -15,13 +15,12 @@ insert into emp values(106, 'Jimmy', 90000);
 
 select * from emp;
 
+-- Find employees who earns more than average salary of all employee
 with avg_sal(avg_salary) as
 		(select cast(avg(salary) as int) from emp)
 select *
 from emp e
 join avg_sal av on e.salary > av.avg_salary
-
-
 
 
 
