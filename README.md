@@ -24,6 +24,8 @@ Key Differences from Other SQL Constructs
 ## SQL window functions
 SQL window functions perform calculations across a set of table rows that are related to the current row, without merging those rows into a single output like a standard aggregate function would. This enables calculations such as running totals, moving averages, and rankings while retaining individual row details in the result set.
  
+ ![alt text](image.png)
+
 Key Components 
 The core of a window function is the  clause, which defines the "window" of rows the function operates on. The syntax is as follows: 
 ```sql
@@ -78,3 +80,8 @@ ORDER BY
     category, transaction_date; --
 ```
 This query partitions the data by , orders rows within each category by , and calculates the cumulative sum of  for each row, resetting the sum for every new category.
+
+## COALESCE
+The COALESCE function in SQL is a versatile, standard function that evaluates a list of expressions in order and returns the first non-NULL value. If all expressions in the list are NULL, the function returns NULL.
+
+COALESCE(expression1, expression2, expression3, ...)
